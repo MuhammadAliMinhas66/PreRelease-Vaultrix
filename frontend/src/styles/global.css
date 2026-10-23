@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Keep the vertical scrollbar's gutter reserved at all times, even on pages
+   whose content is short enough that no scrollbar appears. Without this,
+   switching between tabs/sections with different content heights toggles
+   the scrollbar on and off, which shifts the whole page's usable width and
+   makes fixed-position layouts (like the Settings sidebar) jump left/right. */
+html {
+  overflow-y: scroll;
+  scrollbar-gutter: stable;
+}
+
+body {
+  @apply bg-background text-ink font-sans;
+}
+
+p,
+span,
+label,
+h1,
+h2,
+h3,
+h4,
+a,
+button,
+input,
+textarea,
+li {
+  unicode-bidi: plaintext;
+}
+
+@keyframes toast-shrink {
+  from {
+    transform: scaleX(1);
+  }
+  to {
+    transform: scaleX(0);
+  }
+}
